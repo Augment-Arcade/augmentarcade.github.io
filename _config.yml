@@ -1,0 +1,22 @@
+
+title: Augment Arcade | High-end DC VR Arcade and Bar
+email: team@augmentarcade.com
+description:
+baseurl: "" # the subpath of your site, e.g. /blog
+url: https://www.augmentarcade.com   # with the https protocol # the base hostname & protocol for your site
+enforce_ssl: www.augmentarcade.com   # without any protocol
+
+facebook: https://www.facebook.com/augmentarcade/
+twitter:
+g+:
+linkedin:
+github: https://github.com/Augment-Arcade
+segment:
+alexa:
+
+exclude: ["gulpfile.js",
+          "node_modules",
+          "package.json",
+          "Gemfile",
+          "Gemfile.lock",
+          "feed.xml"]
