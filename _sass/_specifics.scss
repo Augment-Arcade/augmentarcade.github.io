@@ -117,6 +117,21 @@ Navbar
 }
 
 /*
+Homepage
+*/
+.social-list {
+  img {
+    width: 20px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    opacity: .7;
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+/*
 Footer
 */
 .subscribe {
