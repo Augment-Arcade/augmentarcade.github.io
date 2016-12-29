@@ -211,8 +211,8 @@ Buttons
   padding: 0;
   margin-left: 1rem;
   .nav-link {
-    padding-right: 1rem;
-    padding-left: 1rem;
+    padding: 12px 36px;
+    line-height: 1.25;
     &:hover {
       color: $white;
     }
@@ -220,7 +220,7 @@ Buttons
   @media (max-width: 575px) {
     margin-left: 0;
     .nav-link {
-
+      padding-left: 1rem;
     }
   }
 }

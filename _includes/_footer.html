@@ -78,14 +78,19 @@
       }
   });
 
+
+
   /* Makes sure that the menu collapse does not happen on nonmobile resolutions */
-  $(window).on('resize', function(event){
+  function toggleToggler(event){
     var windowWidth = $(window).width();
     if(windowWidth < 576){
       $('div.collapse').attr('id', 'nav-content');
     } else {
       $('div.collapse').attr('id', '');
     }
-  });
+  }
+  $(window).on('resize', toggleToggler); // On window resize, try toggleToggler
+  window.onload = toggleToggler; // On window load, try toggleToggler
+
 
 </script>
