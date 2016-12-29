@@ -117,7 +117,7 @@ Navbar
     margin: 0;
     font-size: 20px;
     outline: none;
-    &:hover {
+    &:active {
       background-color: $grey;
     }
   }
