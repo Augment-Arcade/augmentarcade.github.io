@@ -19,15 +19,20 @@ Universal
 }
 .hero {
   position: relative;
-  padding-top: 165px; // 100 + 65 to offset navbar
+  padding-top: 152px; // 100 + 52 to offset navbar and caption
   padding-bottom: 180px; //100 + 80 to offset triangle
   background-image: url(../img/hero.jpg);
   background-size: cover;
   //background-color: $dark-purple;
+  h2 {
+    color: $lightgrey;
+    margin-bottom: 40px;
+  }
   img {
+    margin-top: 0px;
     width: 420px;
     max-width: 100%;
-    margin-bottom: 80px;
+    margin-bottom: 40px;
   }
   .triangle {
   	width: 0;
@@ -52,24 +57,6 @@ Universal
   margin: 0 auto;
 }
 
-/*
-Buttons
-*/
-.btn {
-  @extend .transition;
-  @extend .default-shadow;
-  color: $white;
-  font-size: 20px;
-  padding: 12px 36px;
-  border-radius: 0px;
-  text-transform: uppercase;
-  font-weight: bold;
-  background-color: $purple;
-  &:hover {
-    color: $white;
-    background-color: $light-purple;
-  }
-}
 
 /*
 Navbar
@@ -86,7 +73,7 @@ Navbar
     font-weight: bold;
     text-transform: uppercase;
     &:hover {
-      color: $lighter-purple;
+      color: $light-purple;
     }
   }
   .navbar-nav .nav-item+.nav-item {
@@ -97,7 +84,7 @@ Navbar
   }
   .nav {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     @media (max-width: 544px) {
       display: inline;
@@ -157,4 +144,47 @@ Footer
   background-color: $black;
   padding-top: 40px;
   padding-bottom: 40px;
+}
+
+
+/*
+Buttons
+*/
+.btn {
+  @extend .transition;
+  @extend .default-shadow;
+  color: $white;
+  font-size: 20px;
+  padding: 12px 36px;
+  border-radius: 0px;
+  text-transform: uppercase;
+  font-weight: bold;
+  background-color: $purple;
+  &:hover, &:focus {
+    color: $white;
+    background-color: $light-purple;
+  }
+  &:active {
+    color: $white;
+    background-color: $purple;
+  }
+}
+.btn-nav-item {
+  @extend .btn;
+  background-color: $purple;
+  padding: 0;
+  margin-left: 1rem;
+  .nav-link {
+    padding-right: 1rem;
+    padding-left: 1rem;
+    &:hover {
+      color: $white;
+    }
+  }
+  @media (max-width: 544px) {
+    margin-left: 0;
+    .nav-link {
+
+    }
+  }
 }
