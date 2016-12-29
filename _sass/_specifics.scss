@@ -15,7 +15,9 @@ Universal
   background-color: $greybg;
 }
 .list-inline {
-  display: inline;
+  li {
+    display: inline;
+  }
 }
 .hero {
   position: relative;
@@ -139,11 +141,30 @@ Footer
     z-index: 10;
     top: 0;
   }
+  .brand-list {
+    padding-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 60px; // 80 - 20 bc the items have 20 top margin
+    margin-bottom: 0;
+    justify-content: center;
+    .list-item {
+      margin-top: 20px; // 20 top margin for when wrapping occurs
+      margin-bottom: 0;
+      img {
+        padding-right: 2rem;
+        padding-left: 2rem;
+        max-height: 40px;
+        opacity: .5;
+      }
+    }
+  }
 }
 .footer {
-  background-color: $black;
   padding-top: 40px;
   padding-bottom: 40px;
+
 }
 
 
