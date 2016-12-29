@@ -64,9 +64,12 @@ Universal
 Navbar
 */
 .navbar {
+  display: flex;
+  justify-content: flex-end;
   padding: 0;
   transition: ease all .5s;
   @media (max-width: 575px) {
+    display: inline;
     background-color: black;
   }
   li a {
@@ -93,6 +96,16 @@ Navbar
       .nav-item {
         padding-left: 1rem;
       }
+    }
+  }
+  .logo-ico {
+    position: absolute;
+    left: .5rem;
+    max-height: 26px;
+    max-width: 26px;
+    align-self: center;
+    @media (max-width: 575px) {
+      position: static;
     }
   }
   .navbar-toggle {
@@ -156,12 +169,16 @@ Footer
     z-index: 10;
     top: 0;
   }
+}
+.footer {
+  padding-top: 40px;
+  padding-bottom: 40px;
   .brand-list {
     padding-left: 0;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    margin-top: 60px; // 80 - 20 bc the items have 20 top margin
+    margin-top: -20px; // 0 - 20 bc the items have 20 top margin
     margin-bottom: 0;
     justify-content: center;
     .list-item {
@@ -175,11 +192,6 @@ Footer
       }
     }
   }
-}
-.footer {
-  padding-top: 40px;
-  padding-bottom: 40px;
-
 }
 
 
@@ -218,9 +230,9 @@ Buttons
     }
   }
   @media (max-width: 575px) {
-    margin-left: 0;
-    .nav-link {
-      padding-left: 1rem;
-    }
   }
+}
+.btn-nav {
+  position: absolute;
+  right: 0;
 }
