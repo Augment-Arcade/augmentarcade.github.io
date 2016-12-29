@@ -78,4 +78,14 @@
       }
   });
 
+  /* Makes sure that the menu collapse does not happen on nonmobile resolutions */
+  $(window).on('resize', function(event){
+    var windowWidth = $(window).width();
+    if(windowWidth < 576){
+      $('div.collapse').attr('id', 'nav-content');
+    } else {
+      $('div.collapse').attr('id', '');
+    }
+  });
+
 </script>
