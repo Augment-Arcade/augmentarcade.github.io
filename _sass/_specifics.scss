@@ -1,7 +1,6 @@
 /*
 Universal
 */
-
 // @extend this for transition animations
 .transition {
   transition: ease all .1s;
@@ -15,11 +14,16 @@ Universal
 .purple-background {
   background-color: $purplebg;
 }
+.list-inline {
+  display: inline;
+}
 .hero {
   position: relative;
-  padding-top: 100px;
+  padding-top: 165px; // 100 + 65 to offset navbar
   padding-bottom: 180px; //100 + 80 to offset triangle
-  background-color: $dark-purple;
+  background-image: url(../img/herobg.jpg);
+  background-size: cover;
+  //background-color: $dark-purple;
   img {
     width: 420px;
     max-width: 100%;
@@ -43,11 +47,14 @@ Universal
   }
 }
 .page-divider {
-  border-bottom: 2px solid $white;
+  border-bottom: 2px solid rgba(255,255,255, .2);
   width: 50px;
   margin: 0 auto;
-  opacity: .2;
 }
+
+/*
+Buttons
+*/
 .btn {
   @extend .transition;
   @extend .default-shadow;
@@ -63,7 +70,64 @@ Universal
     background-color: $light-purple;
   }
 }
+
+/*
+Navbar
+*/
+.navbar {
+  transition: ease all .5s;
+  @media (max-width: 544px) {
+    background-color: black;
+  }
+  li a {
+    @extend .transition;
+    color: $white;
+    font-weight: bold;
+    text-transform: uppercase;
+    &:hover {
+      color: $light-purple;
+    }
+  }
+  .navbar-nav .nav-item+.nav-item {
+    padding-left: 1rem;
+    @media (max-width: 544px) {
+      padding-left: 0;
+    }
+  }
+  .navbar-toggler {
+    color: white;
+  }
+  .nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media (max-width: 544px) {
+      display: inline;
+    }
+  }
+  .navbar-toggle {
+    cursor: pointer;
+    background-color: $purple;
+    padding: 0;
+    margin: 0;
+    font-size: 30px;
+    outline: none;
+    &:hover, &:active, &:focus {
+      color: $purple;
+    }
+  }
+
+}
+.navbar-black {
+  background-color: black;
+}
+
+/*
+Footer
+*/
 .subscribe {
+  background-image: url(../img/foot.jpg);
+  background-size: cover;
   position: relative;
   padding-top: 160px; //80 + 80 to offset the triangle
   padding-bottom: 80px;

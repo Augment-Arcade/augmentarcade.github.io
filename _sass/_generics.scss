@@ -49,6 +49,7 @@ a {
   }
 }
 input[type=text] {
+  @extend .transition;
   font-family: 'Pontano Sans', sans-serif;
   width: 100%;
   padding: 12px 20px;
@@ -61,5 +62,8 @@ input[type=text] {
   &::-webkit-input-placeholder {
     color: $white;
     opacity: .4;
+  }
+  &:focus, &:hover {
+    border-color: $purple;
   }
 }
