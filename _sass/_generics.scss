@@ -18,7 +18,7 @@ body {
 }
 p {
   font-family: 'Pontano Sans', sans-serif;
-  opacity: .8;
+  color: $lightgrey;
 }
 h1,h2,h3,h4,h5,h6 {
   color: $white;
@@ -42,9 +42,9 @@ ul {
   list-style-type: none;
 }
 a {
-  color: $purple;
+  color: $light-purple;
   &:hover {
-    color: $light-purple;
+    color: $lighter-purple;
     text-decoration: none;
   }
 }
@@ -64,6 +64,6 @@ input[type=text] {
     opacity: .4;
   }
   &:focus, &:hover {
-    border-color: $purple;
+    border-color: $white;
   }
 }

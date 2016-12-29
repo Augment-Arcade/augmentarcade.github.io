@@ -12,7 +12,7 @@ Universal
   text-align: center;
 }
 .purple-background {
-  background-color: $purplebg;
+  background-color: $greybg;
 }
 .list-inline {
   display: inline;
@@ -21,7 +21,7 @@ Universal
   position: relative;
   padding-top: 165px; // 100 + 65 to offset navbar
   padding-bottom: 180px; //100 + 80 to offset triangle
-  background-image: url(../img/herobg.jpg);
+  background-image: url(../img/hero.jpg);
   background-size: cover;
   //background-color: $dark-purple;
   img {
@@ -32,7 +32,7 @@ Universal
   .triangle {
   	width: 0;
   	height: 0;
-  	border-bottom: 80px solid $purplebg;
+  	border-bottom: 80px solid $greybg;
   	border-right: 100vw solid transparent;
     position: absolute;
     z-index: 10;
@@ -75,6 +75,7 @@ Buttons
 Navbar
 */
 .navbar {
+  padding: 0;
   transition: ease all .5s;
   @media (max-width: 544px) {
     background-color: black;
@@ -85,14 +86,11 @@ Navbar
     font-weight: bold;
     text-transform: uppercase;
     &:hover {
-      color: $light-purple;
+      color: $lighter-purple;
     }
   }
   .navbar-nav .nav-item+.nav-item {
     padding-left: 1rem;
-    @media (max-width: 544px) {
-      padding-left: 0;
-    }
   }
   .navbar-toggler {
     color: white;
@@ -103,17 +101,24 @@ Navbar
     align-items: center;
     @media (max-width: 544px) {
       display: inline;
+      .nav-item {
+        padding-left: 1rem;
+      }
     }
   }
   .navbar-toggle {
+    @extend .transition;
     cursor: pointer;
-    background-color: $purple;
-    padding: 0;
+    border: none;
+    line-height: 1;
+    background-color: transparent;
+    padding: 1rem;
+    color: $white;
     margin: 0;
-    font-size: 30px;
+    font-size: 20px;
     outline: none;
-    &:hover, &:active, &:focus {
-      color: $purple;
+    &:hover {
+      background-color: $grey;
     }
   }
 
@@ -131,7 +136,6 @@ Footer
   position: relative;
   padding-top: 160px; //80 + 80 to offset the triangle
   padding-bottom: 80px;
-  background-color: $dark-purple;
   h2 {
     margin-bottom: 40px;
   }
@@ -142,7 +146,7 @@ Footer
   .triangle {
   	width: 0;
   	height: 0;
-  	border-top: 80px solid $purplebg;
+  	border-top: 80px solid $greybg;
   	border-left: 100vw solid transparent;
     position: absolute;
     z-index: 10;
