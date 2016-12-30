@@ -99,12 +99,19 @@ Navbar
     }
   }
   .logo-ico {
+    @extend .transition;
     position: absolute;
+    top: 50%;
     left: .5rem;
-    max-height: 26px;
-    max-width: 26px;
+    height: 26px;
+    width: 26px;
+    margin-top: -13px;
     align-self: center;
+    &:hover {
+      filter: brightness(2);
+    }
     @media (max-width: 575px) {
+      margin: auto;
       position: static;
     }
   }
