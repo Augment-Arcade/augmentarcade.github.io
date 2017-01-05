@@ -14,11 +14,19 @@ Universal
 .grey-background {
   background-color: $greybg;
 }
+.footer-background {
+  background-image: url(../img/foot.jpg);
+  background-size: cover;
+}
 .list-inline {
   li {
     display: inline;
   }
 }
+
+/*
+Layouts
+*/
 .hero {
   position: relative;
   padding-top: 152px; // 100 + 52 to offset navbar and caption
@@ -49,14 +57,22 @@ Universal
 .page-section {
   padding-top: 80px;
   padding-bottom: 80px;
-  h2 {
-    margin-bottom: 40px;
+  h1 {
+    margin-bottom: 10px;
+  }
+  h3 {
+    color: $lightgrey;
+    margin-bottom: 80px;
   }
 }
 .page-divider {
   border-bottom: 2px solid rgba(255,255,255, .2);
   width: 50px;
   margin: 0 auto;
+}
+.page-divider-lg {
+  @extend .page-divider;
+  max-width: 100%;
 }
 
 
@@ -137,26 +153,10 @@ Navbar
 }
 
 /*
-Homepage
-*/
-.social-list {
-  li a img {
-    max-width: 20px;
-    margin-left: 1rem;
-    margin-right: 1rem;
-    opacity: .7;
-    &:hover {
-      opacity: 1;
-    }
-  }
-}
-
-/*
 Footer
 */
 .subscribe {
-  background-image: url(../img/foot.jpg);
-  background-size: cover;
+  @extend .footer-background;
   position: relative;
   padding-top: 160px; //80 + 80 to offset the triangle
   padding-bottom: 80px;
@@ -224,6 +224,18 @@ Buttons
     background-color: $purple;
   }
 }
+
+.btn-outline {
+  @extend .btn;
+  margin: 0 auto;
+  background-color: transparent;
+  border: 2px solid $purple;
+  &:hover {
+    border-color: $light-purple;
+    background-color: transparent;
+  }
+}
+
 .btn-nav-item {
   @extend .btn;
   background-color: $purple;
@@ -242,4 +254,58 @@ Buttons
 .btn-nav {
   position: absolute;
   right: 0;
+}
+
+
+/*
+Homepage
+*/
+.social-list {
+  li a img {
+    max-width: 20px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    opacity: .7;
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+.event-listing {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-top: 40px;
+  .left {
+    h4 {
+      line-height: 2rem; // font-size of h2
+    }
+    .date {
+      border-left: 2px solid $lightgrey;
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+    @media (max-width: 767px) {
+      .date {
+        border: none;
+        padding: 0;
+      }
+      .btn-outline {
+        margin-top: 40px;
+      }
+    }
+  }
+  .right {
+    text-align: right;
+    .event-img {
+      max-width: 100%;
+      margin-bottom: 20px;
+      width: 157px; // width of the btn
+    }
+    @media (max-width: 767px) {
+      text-align: left;
+    }
+  }
+}
+.event-listing:first-of-type {
+  margin-top: 0;
 }
