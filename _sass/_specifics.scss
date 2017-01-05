@@ -60,6 +60,9 @@ Layouts
   h1 {
     margin-bottom: 10px;
   }
+  h2 {
+    margin-bottom: 40px;
+  }
   h3 {
     color: $lightgrey;
     margin-bottom: 80px;
@@ -283,6 +286,9 @@ Homepage
       border-left: 2px solid $lightgrey;
       padding: 10px;
       margin-bottom: 20px;
+      h2 {
+        margin-bottom: 0;
+      }
     }
     @media (max-width: 767px) {
       .date {
